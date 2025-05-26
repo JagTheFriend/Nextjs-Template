@@ -2,6 +2,7 @@ import {
   createSafeActionClient,
   DEFAULT_SERVER_ERROR_MESSAGE,
 } from "next-safe-action";
+import { auth } from "./auth";
 
 class ActionError extends Error {}
 
@@ -22,16 +23,10 @@ const actionClient = createSafeActionClient({
 export const authActionClient = actionClient
   // Define authorization middleware.
   .use(async ({ next }) => {
-    const session = "";
-    if (!session) {
+    const session = await auth();
+    if (!session?.user) {
       throw new Error("Session not found!");
     }
-
-    const userId = "";
-    if (!userId) {
-      throw new Error("Session is not valid!");
-    }
-
-    // Return the next middleware with `userId` value in the context
-    return next({ ctx: { userId } });
+    // Return the next middleware with `user` value in the context
+    return next({ ctx: { user: session.user } });
   });
