@@ -1,20 +1,20 @@
 {
-	"[typescriptreact]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[prisma]": {
-		"editor.defaultFormatter": "Prisma.prisma"
-	},
-	"files.autoSave": "onFocusChange",
-	"files.trimTrailingWhitespace": true,
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"editor.codeActionsOnSave": {
-		"source.fixAll.ts": "always",
-		"source.fixAll.biome": "always",
-		// "source.sortImports": "always",
-		// "source.organizeImports.biome": "always",
-		"source.organizeImports": "always",
-		"source.removeUnusedImports": "always"
-	}
-	//
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "files.autoSave": "onFocusChange",
+  "files.trimTrailingWhitespace": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.ts": "always",
+    "source.fixAll.biome": "always",
+    // "source.sortImports": "always",
+    // "source.organizeImports.biome": "always",
+    "source.organizeImports": "always",
+    "source.removeUnusedImports": "always"
+  }
+  //
 }
